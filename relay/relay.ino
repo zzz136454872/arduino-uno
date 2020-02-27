@@ -1,20 +1,22 @@
-#define com 3
+#define con 3
 #define in 4
+#define down 10
  
 void setup() {
     Serial.begin(9600);
-    pinMode(com,OUTPUT);
+    pinMode(con,OUTPUT);
     pinMode(in,INPUT);
+    pinMode(down,OUTPUT);
+    digitalWrite(down,LOW);
 }
+
+int i=0;
 
 void loop() {
     int in1;
-    digitalWrite(com,high);
-    Serial.println("high");
+    digitalWrite(con,HIGH);
     delay(50);
     in1=digitalRead(in);
-    Serial.println("in: ");
     Serial.println(in1);
-    Serial.println();
-    delay(5000);
+    delay(200);
 }
