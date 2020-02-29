@@ -16,11 +16,12 @@ void setup() {
 
 void loop() {
     String tmp;
-    while(ss.peek()==-1)
+    while(Serial.peek()==-1)
         ;
-    tmp=ss.readString();
-    Serial.print("from nano: ");
-    Serial.print(tmp);
+    tmp=Serial.readString();
+    ss.print("from computer: ");
+    delay(100);
+    ss.print(tmp);
     delay(100);
     //接收到的string 是包括换行符的。
 }
