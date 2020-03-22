@@ -67,8 +67,6 @@ void setup() {
     }
 }
 
-
-
  //Via seriele monitor de bytes uitlezen in hexadecimaal
  
 void dump_byte_array(byte *buffer, byte bufferSize) {
@@ -142,7 +140,6 @@ bool try_key(MFRC522::MIFARE_Key *key)
     mfrc522.PICC_HaltA();       // Halt PICC
     mfrc522.PCD_StopCrypto1();  // Stop encryption on PCD
     return result;
-    
     start();
 }
 
